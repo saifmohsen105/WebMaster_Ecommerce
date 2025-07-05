@@ -5,10 +5,11 @@ import { Router } from '@angular/router';
 import { ProductsService } from '../../core/services/products/products.service';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { SlicePipe } from '../../shared/pipes/slice/slice.pipe';
 
 @Component({
   selector: 'app-cart',
-  imports: [CommonModule, CurrencyPipe, RouterLink],
+  imports: [CommonModule, CurrencyPipe, RouterLink , SlicePipe],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })

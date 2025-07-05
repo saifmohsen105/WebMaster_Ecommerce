@@ -9,11 +9,11 @@ import { CurrencyPipe } from '@angular/common';
 import { ICategory } from '../../shared/interfaces/icategory';
 import { WishlistService } from '../../core/services/wishlist/wishlist.service';
 import { CartService } from '../../core/services/cart.service';
+import { SlicePipe } from '../../shared/pipes/slice/slice.pipe';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
-  imports: [CarouselModule, RouterLink, CardComponent],
+  imports: [CarouselModule, RouterLink, CardComponent , SlicePipe],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
@@ -123,7 +123,7 @@ export class HomeComponent implements OnInit {
     ],
     responsive: {
       0: {
-        items: 2 // موبايل صغير
+        items: 1 // موبايل صغير
       },
       576: {
         items: 3 // موبايل كبير أو تابلت صغير

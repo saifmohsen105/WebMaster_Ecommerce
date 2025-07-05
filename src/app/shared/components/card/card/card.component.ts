@@ -1,13 +1,14 @@
-import { CurrencyPipe, NgStyle, DecimalPipe, isPlatformBrowser } from '@angular/common';
-import { Component, Input, OnInit, inject, PLATFORM_ID, signal, computed, Output, EventEmitter } from '@angular/core';
-import { WishlistService } from '../../../../core/services/wishlist/wishlist.service';
+import { CurrencyPipe, isPlatformBrowser, NgStyle } from '@angular/common';
+import { Component, computed, EventEmitter, inject, Input, OnInit, Output, PLATFORM_ID, signal } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { CartService } from '../../../../core/services/cart.service';
+import { WishlistService } from '../../../../core/services/wishlist/wishlist.service';
 import { IProduct } from '../../../interfaces/iproduct';
+import { SlicePipe } from '../../../pipes/slice/slice.pipe';
 
 @Component({
   selector: 'app-card',
-  imports: [CurrencyPipe, NgStyle, DecimalPipe],
+  imports: [CurrencyPipe, NgStyle , SlicePipe],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
