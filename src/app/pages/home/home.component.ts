@@ -152,7 +152,7 @@ export class HomeComponent implements OnInit {
     ],
     responsive: {
       0: {
-        items: 2 // موبايل صغير
+        items: 1 // موبايل صغير
       },
       576: {
         items: 3 // موبايل كبير أو تابلت صغير
