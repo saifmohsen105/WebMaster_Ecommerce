@@ -1,19 +1,17 @@
-import { IProduct } from './../../shared/interfaces/iproduct';
-import { Component, inject, OnInit, PLATFORM_ID, signal, WritableSignal } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
-import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
-import { ProductsService } from '../../core/services/products/products.service';
+import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { CardComponent } from "../../shared/components/card/card/card.component";
-import { CurrencyPipe } from '@angular/common';
-import { ICategory } from '../../shared/interfaces/icategory';
-import { WishlistService } from '../../core/services/wishlist/wishlist.service';
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { ToastrService } from 'ngx-toastr';
 import { CartService } from '../../core/services/cart.service';
-import { SlicePipe } from '../../shared/pipes/slice/slice.pipe';
+import { ProductsService } from '../../core/services/products/products.service';
+import { WishlistService } from '../../core/services/wishlist/wishlist.service';
+import { CardComponent } from "../../shared/components/card/card/card.component";
+import { ICategory } from '../../shared/interfaces/icategory';
+import { IProduct } from './../../shared/interfaces/iproduct';
 
 @Component({
   selector: 'app-home',
-  imports: [CarouselModule, RouterLink, CardComponent , SlicePipe],
+  imports: [CarouselModule, RouterLink, CardComponent ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
